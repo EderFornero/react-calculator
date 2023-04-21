@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@300&display=swap');
+
+
+:root {
+   --primary: #ffee5b;
+   --secondary: #fba336;
+   --dark: #131607;
+   --light: #eee;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Pathway Extreme', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+   background-color: var(--light);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-div {
+   min-height: 100vh;
+   width: 100%;
+   padding: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.main-calculator {
+   width: 100%;
+   max-width: 400px;
+   background-color: #FFF;
+   border-radius: 16px;
+   overflow: hidden;
+   box-shadow: 0px 2px 64px rgba(0, 0, 0, .2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display {
+   padding: 16px;
+   text-align: right;
+   background-color: var(--dark);
+   color: var(--light);
+   font-size: 24px;
+   font-weight: 300;
+}
+
+.display span {
+   font-size: 14px;
+   color: var(--secondary);
+}
+
+button {
+   appearance: none;
+   outline: none;
+   border: none;
+   color: #FFF;
+   font-size: 20px;
+   padding: 16px;
+   cursor: pointer;
+   transition: .4s;
+}
+
+button:hover {
+   opacity: .9;
+}
+
+
+.operators {
+   display: flex;
+}
+
+.operators button {
+   color: #131607;
+   flex: 1 1 0%;
+   background-color: var(--primary);
+   font-weight: 700;
+}
+
+.operators button:hover {
+   opacity: 0.8;
+}
+
+.digits {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.digits button {
+   flex: 1 1 33.3333%;
+   max-width: 33.3333%;
+   background-color: var(--dark);
 }
